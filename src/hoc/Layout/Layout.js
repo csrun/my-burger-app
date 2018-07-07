@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import Auxilliairy from '../../hoc/Auxilliairy';
-import Toolbar from '../Navigation/Toolbar/Toolbar';
-import SideDrawer from '../Navigation/SideDrawer/SideDrawer';
+import Auxilliary from '../Auxilliary/Auxilliary';
+import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
+import SideDrawer from '../../components/Navigation/SideDrawer/SideDrawer';
 import classes from './Layout.css';
 
 class Layout extends Component  {
@@ -22,7 +22,7 @@ class Layout extends Component  {
 
   render () {
     return (
-      <Auxilliairy>
+      <Auxilliary>
         <Toolbar drawerToggleClicked={this.sideDrawerToggleHandler}/>
         <SideDrawer
           open={this.state.showSideDrawer}
@@ -30,7 +30,7 @@ class Layout extends Component  {
         <main className={classes.Content}>
           {this.props.children}
         </main>
-      </Auxilliairy>
+      </Auxilliary>
     );
   }
 }
